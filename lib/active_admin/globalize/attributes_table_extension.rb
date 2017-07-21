@@ -114,7 +114,7 @@ module ActiveAdmin
             content_tag(:li, class: css_classes) do
               I18n.with_locale(translation.locale) do
                 default = 'default' if translation.locale == initial_locale.to_sym
-                content_tag(:a, I18n.t(:"active_admin.globalize.language.#{translation.locale}"), href: ".locale-#{translation.locale}", class: default)
+                content_tag(:a, translation.locale, href: ".locale-#{translation.locale}", class: default)
               end
             end
           end.join.html_safe
