@@ -43,3 +43,6 @@ group :test do
   gem 'awesome_print'
   gem 'pry'
 end
+
+# more flags
+gem 'flag-icons-rails'
