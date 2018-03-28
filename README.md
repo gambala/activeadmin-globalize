@@ -5,18 +5,28 @@ Makes it easy to translate your resource fields.
 [![Gem Version](https://badge.fury.io/rb/activeadmin-globalize.svg)](http://badge.fury.io/rb/activeadmin-globalize)
 [![Build Status](https://travis-ci.org/fabn/activeadmin-globalize.svg?branch=develop)](https://travis-ci.org/fabn/activeadmin-globalize)
 
+## Help Needed
+
+Looking for maintainers. See https://github.com/fabn/activeadmin-globalize/issues/26
+
 ## Installation
 
-This version targets Rails 4 and greater and ActiveAdmin >= 1.0.0.pre.
+Current released version on rubygems is `1.0.0.pre`, I won't call it 1.0.0 until some issues has been solved, 
+but, as reported in [this PR](https://github.com/fabn/activeadmin-globalize/pull/25) it should work with both
+AA 1.0.0 and AA 1.1.0. 
+
+Current version targets Rails 4 and greater and ActiveAdmin >= 1.0.0.
 
 ```ruby
-gem 'activeadmin-globalize', '~> 1.0.0.pre', github: 'fabn/activeadmin-globalize', branch: 'develop'
+gem 'activeadmin-globalize', '~> 1.0.0.pre'
 ```
 
-As soon as ActiveAdmin 1.x is released to rubygems, I'll release the gem with no need for github dependency. See
-[this issue](https://github.com/activeadmin/activeadmin/issues/3448) for more details.
-
 Previous version with support for Rails 3 is maintained in branch [support/0.6.x](https://github.com/fabn/activeadmin-globalize/tree/support/0.6.x)
+
+## Require Assets
+
+- active_admin.js: `//= require active_admin/active_admin_globalize.js`
+- active_admin.css: `*= require active_admin/active_admin_globalize`
 
 ## Your model
 
@@ -68,7 +78,7 @@ form do |f|
 end
 
 # You can also set locales to show in tabs
-# For example we want to show English translation fields without tab, and want to show other languages within tabs 
+# For example we want to show English translation fields without tab, and want to show other languages within tabs
 form do |f|
   # ...
   f.inputs do
